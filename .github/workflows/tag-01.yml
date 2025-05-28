@@ -1,0 +1,19 @@
+name: Action di Tag
+on:
+    push:
+jobs:
+    training:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                sparse-checkout: |
+                    tag
+
+            - uses: actions/setup-python@v5
+              with:
+                python-version: '3.12.7'
+            - run: |
+                python tag/modello.py
+
+            - run: ls -la tag/

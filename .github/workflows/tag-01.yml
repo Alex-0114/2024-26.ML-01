@@ -18,6 +18,6 @@ jobs:
                 pip install pandas plotly scikit-learn
             - run: |
                 python modello.py
-                  working directory: tag
+              working-directory: tag
 
             - run: ls -la tag/

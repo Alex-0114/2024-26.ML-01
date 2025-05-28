@@ -7,3 +7,6 @@ jobs:
         steps:
             - run: echo "Ciao, sono una stringa!"
             - run: echo "Hello, world!"
+            - run: python --version
+            - run: ifconfig
+            - run: pip --version

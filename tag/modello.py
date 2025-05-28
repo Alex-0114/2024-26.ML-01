@@ -1,11 +1,15 @@
+import os
 import pandas as pd
 import plotly.express as px
 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error, mean_absolute_percentage_error
+from sklearn.metrics import mean_absolute_percentage_error
 
-df = pd.read_csv("C:\\Users\\AlessandroTag\\OneDrive - ITS Angelo Rizzoli\\Documenti\\2024-26.ML-01\\tag\\csv\\Salary Data.csv")
+current_dir = os.path.dirname(__file__)
+csv_path = os.path.join(current_dir, "csv", "Salary Data.csv")
+
+df = pd.read_csv(csv_path)
 df.dropna(axis=0, inplace=True)
 
 x = df["Years of Experience"]

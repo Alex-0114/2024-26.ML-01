@@ -10,3 +10,7 @@ jobs:
             - run: python --version
             - run: ifconfig
             - run: pip --version
+            - run: lsb_release -d
+            - run: ls -la
+            - run: pwd
+            - run: env

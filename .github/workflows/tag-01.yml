@@ -1,4 +1,4 @@
-name: Action di Tag
+name: Training modello ML
 on:
     push:
 jobs:

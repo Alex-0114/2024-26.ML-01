@@ -14,3 +14,11 @@ jobs:
             - run: ls -la
             - run: pwd
             - run: env
+    cloneCartella:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+              with:
+                sparse-checkout: |
+                    tag
+            - run: ls -la

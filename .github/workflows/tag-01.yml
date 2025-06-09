@@ -55,5 +55,5 @@ jobs:
 
         - name: Esegui inferenza
           run: |
-            python -m pytest test_app.py
+            python -m pytest -s test_app.py
           working-directory: tag

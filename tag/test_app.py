@@ -11,6 +11,10 @@ def client():
 def test_predict(client):
     response = client.post("/predict", json={"hyper_param": 5})
     assert response.status_code == 200
+    
     data = response.get_json()
+    print(f"Response data: {data}")
+
     assert "stipendio_previsto" in data
     assert isinstance(data["stipendio_previsto"], float)
+    assert "latency_seconds" in data
